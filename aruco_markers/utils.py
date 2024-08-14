@@ -4,8 +4,9 @@ from os import listdir
 from os.path import isdir, isfile
 from os.path import join as join_path
 
-
-homedir = os.environ["HOME"]
+# Solution adapted from Stack Overflow.
+# URL: https://stackoverflow.com/questions/14742064/python-os-environhome-works-on-idle-but-not-in-a-script
+homedir = os.path.expanduser('~')
 
 
 def mkdir(path, dirname):
